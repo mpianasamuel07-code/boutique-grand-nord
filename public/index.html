@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Boutique Grand Nord</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h1>❄ Boutique Grand Nord</h1>
+    <p>Souffleuses, bois de chauffage et tout pour l'hiver · Ottawa</p>
+    <a href="/gestion.html">Espace gérant →</a>
+  </header>
+
+  <main>
+    <section>
+      <h2>Catalogue</h2>
+      <ul id="catalogue"></ul>
+    </section>
+
+    <section>
+      <h2>Commander</h2>
+      <form id="commande">
+        <fieldset>
+          <legend>Toi</legend>
+          <input name="nom" placeholder="Ton nom">
+          <input name="courriel" type="email" placeholder="ton@courriel.ca">
+        </fieldset>
+
+        <fieldset>
+          <legend>Ta commande</legend>
+          <select name="produitId">
+            <option value="1">Souffleuse Yéti 24 po</option>
+            <option value="2">Souffleuse Blizzard 28 po</option>
+            <option value="3">Corde de bois d’érable</option>
+            <option value="4">Pelle à neige Nordik</option>
+            <option value="5">Sel de déglaçage 20 kg</option>
+          </select>
+          <input name="quantite" type="number" value="1">
+        </fieldset>
+
+        <fieldset>
+          <legend>Livraison</legend>
+          <input type="radio" name="livraison" value="cueillette" checked>
+          Cueillette en magasin
+          <input type="radio" name="livraison" value="domicile">
+          Livraison (+25 $)
+          <input name="adresse" placeholder="Adresse de livraison">
+        </fieldset>
+
+        <fieldset>
+          <legend>Options</legend>
+          <input type="checkbox" name="options" value="installation">
+          Mise en marche (+49 $)
+          <input type="checkbox" name="options" value="garantie">
+          Garantie 3 ans (+99 $)
+        </fieldset>
+
+        <button>Commander</button>
+      </form>
+      <p id="confirmation"></p>
+      <p id="erreur"></p>
+    </section>
+  </main>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
